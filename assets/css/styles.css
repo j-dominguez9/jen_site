@@ -5,8 +5,6 @@
 
 .black_border {
     border:1px solid black;
-    padding: 1rem;
-    margin: .25rem;
 }
 
 .header_text_small {
@@ -82,7 +80,7 @@
 #MTP {
     font-family:'Fjalla One';
     font-weight: 400;
-    color: rgb(109, 147, 172)
+    color: rgb(89, 121, 142)
 }
 
 .buttons {
@@ -99,4 +97,61 @@
     font-family: 'Source Sans 3';
     color: rgb(94, 94, 94);
     
+}
+
+div#banner { 
+    position: relative; 
+    background-color: rgb(89, 121, 142); 
+    width: 100%;
+    height: auto;;
+    border-left-width:1px;
+    border-bottom-width:1px;
+    border-right-width:1px;
+    border-top-width:1px; 
+    border-color: #eee;
+    border-bottom-style: solid;
+    padding-top:56px; 
+    padding-bottom:56px;
+  }
+
+div#plant_banner {
+    width:100%;
+    background-image: linear-gradient(rgba(0,0,0,0.24) 0%, rgba(0,0,0,0.24) 100%), url(/assets/img/plant_banner.webp);
+    background-size: cover;
+    opacity: 1;
+    height: 320px;
+    background-position: center;
+    text-shadow: 0px 2px 30px rgba(0,0,0.12);
+    transition: opacity 0.25s, background-size 0.25s, background-position 0.25s;
+    transition-property: opacity, background-size, background-position;
+    transition-duration: 0.25s, 0.25s, 0.25s;
+    transition-timing-function: ease, ease, ease;
+    transition-delay: 0s, 0s, 0s;
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+
+}
+
+h2#psychotherapy {
+    font-family:'Fjalla One';
+    font-weight:400;
+    color: rgb(89, 121, 142);
+    overflow-wrap: break-word;
+    letter-spacing: normal;
+
+}
+
+.bd_psych {
+    width: 50px;
+    border-bottom-width: 2px;
+    border-style: solid;
+    border-color: rgb(226,226,226);
+    margin-top: 24px;
+
+}
+
+.pt_img{
+    display: inline-block;
+    background: linear-gradient(rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.24) 100%);
+    opacity: 1;
 }
