@@ -8,7 +8,7 @@
         <!--BOX ICONS-->
 
         <!--CSS-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link href="./scss/custom.css" rel="stylesheet">
 
 
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
@@ -47,10 +47,10 @@
 
                 <ul class="nav col col-lg-auto me-lg-auto justify-content-start align-items-start mb-md-0 header_text_small">
                     <li class="nav-item"><a class="nav-link active px-3 link_second" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-3 link_dark" href="practitioner.html">The Practitioner</a></li>
-                    <li class="nav-item"><a class="nav-link px-3 link_dark" href="practice.html">The Practice</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 link_dark" href="the-practitioner.html">The Practitioner</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 link_dark" href="the-practice.html">The Practice</a></li>
                     <li class="nav-item"><a class="nav-link px-3 link_dark" href="psychotherapy.html">Psychotherapy</a></li>
-                    <li class="nav-item"><a class="nav-link px-3 link_dark" href="inspire.html">Inspire Me</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 link_dark" href="inspire-me.html">Inspire Me</a></li>
                     <li class="nav-item"><a class="nav-link px-3 link_dark" href="contact.html">Contact</a></li>
                 </ul>
 
@@ -65,7 +65,7 @@
             <div id="bg-wave">
                 <div class="d-flex justify-content-center align-items-start">
                     <div class="col-md-6" >
-                        <div class="p-2 border border-dark border-3 text-white bg-white rounded-3">
+                        <div class="p-2 border border-dark border-3 bg-white rounded-3">
                             <div class="col-sm justify-content-center">
                                 <img class="rounded  img-fluid" src="/assets/img/logo.webp">
                             </div>
@@ -77,9 +77,9 @@
 
         <div class="container-fluid justify-content-center align-items-center">
                 <div class="d-lg-flex flex-row justify-content-center">
-                    <div class=" align-items-center inline_text_large mt-4 mb-2 pt-1 text-body-secondary">Take the first step to get help.</div>
+                    <div class=" align-items-center inline_text_large mt-4 mb-2 pt-1 text-body-secondary text-center">Take the first step to get help.</div>
                     <div class="ps-5 text-start ms-0 mt-4 pt-1">
-                        <a href="#" class="btn btn-secondary px-3" role="button">CALL | EMAIL</a>
+                        <a href="#" class="btn btn-secondary px-3" role="button">Call | Email</a>
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@
         <div class="container-fluid text-center">
             <div class="row g-2 justify-content-md-center">
                 <hr class="mt-5" >
-                <div class="col-sm-6">
+                <div class="col order-2 order-md-2 order-lg-1">
                     <h2 id="MTP" class="p-2 ps-5 pe-5 text-start ms-5 me-5">MEET THE PRACTITIONER</h2>
                     <hr class="" style="width:7%; font-size: 32px; border-style: solid; border-bottom-width:0.5px; margin-top:24px; margin-left:95px; margin-right:auto;"/>
                     <h4 id="jen_name" class="p-4 ps-5 pe-5 ms-5 me-5 text-start">Jennifer Hagelston, LCSW, Psychotherapy in New Haven, CT</h3>
@@ -108,7 +108,7 @@
                         <a href="#" class="btn btn-secondary px-3" role="button">Find out more</a>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-12 col-lg-6 order-1 order-md-1 order-lg-2 ">
                     <img class="rounded img-fluid" src="/assets/img/jen_chair.webp">
                 </div>
             </div>
@@ -126,8 +126,29 @@
         </div>
 
         <!--Plant banner-->
-        <div id="plant_banner">
-            
+        <div class="container-fluid px-0 d-flex">
+            <div id="plant_banner">
+                <div class="row d-flex mt-5">
+                    <div class="col d-flex text-uppercase justify-content-center text-center pt-3">
+                        <h3 id="book_session">book a session with jennifer</h3>
+                    </div>
+                </div>
+                <div class="row d-flex">
+                    <div class="col text-center pt-3 pb-lg-3">
+                        <p class="p_text text-white">Please enter your email here to be contacted for an appointment.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4">
+                        <form>
+                            <div class="d-lg-flex">
+                                <input type="email" class="form-control pe-lg-0" aria-describedby="emailHelp">
+                                <button type="submit" class="btn btn-secondary ms-3">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--Psychotherapy Section-->
@@ -135,50 +156,55 @@
         <hr class="" style="text-align: center; width:4%; font-size: 32px; border-style: solid; border-bottom-width:0.5px; margin-top:24px; margin-left:auto; margin-right:auto; margin-bottom:45px; margin-top:35px;"/>
 
         <div class="container">
-            <div class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-3 justify-content-center">
-                <div class="col py-0 ps-1 pe-0 mx-0">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-auto g-1 justify-content-center d-flex">
+                <div clas="col">
                     <div class="card bg-dark">
-                        <img src="/assets/img/hands.webp" class=" card-img img-fluid opacity-75">
-                        <div class="card-img-overlay text-white d-flex justify-content-center pt-5 mt-5 px-5">
-                            <h2>Depression & Anxiety</h2>
-                        </div>
-                        <div class="card-img-overlay text-white d-flex justify-content-center align-items-center px-5">
-                            <p>Depression, fear, and anxiety are some of the most common and uncomfortable emotions that we can experience at some point in our lives. Through counseling and treatment, we are able to help you recover motivation, perspective, and joy that you once had in your life. </p>
-                        </div>
-                        <div class="card-img-overlay d-flex justify-content-center align-items-end pb-5 mb-5">
+                        <img src="/assets/img/hands.webp" class=" card-img opacity-75">
+                        <div class="card-img-overlay text-white justify-content-center pt-5 mt-5 px-5">
+                            <h2 class="card-title">Depression & Anxiety</h2>
+                            <p class="card-text">Depression, fear, and anxiety are some of the most common and uncomfortable emotions that we can experience at some point in our lives. Through counseling and treatment, we are able to help you recover motivation, perspective, and joy that you once had in your life. </p>
                             <a href="#" class="btn btn-secondary px-3" role="button">Find out more</a>
                         </div>
-                    </div>
-                    
-                </div>
-                <div class="col py-0 px-1 mx-0">
-                    <div class="card bg-dark">
-                        <img src="/assets/img/hands2.webp" class="card-img img-fluid opacity-75">
-                        <div class="card-img-overlay text-white d-flex justify-content-center pt-5 mt-5 px-5">
-                            <h2> Trauma & PTSD</h2>
+                        <!-- <div class="card-img-overlay text-white d-flex justify-content-center align-items-center px-5 card-text">
+                            <p>Depression, fear, and anxiety are some of the most common and uncomfortable emotions that we can experience at some point in our lives. Through counseling and treatment, we are able to help you recover motivation, perspective, and joy that you once had in your life. </p>
                         </div>
-                        <div class="card-img-overlay text-white d-flex justify-content-center align-items-center px-5">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-end pb-5 mb-5 card-text">
+                            <a href="#" class="btn btn-secondary px-3" role="button">Find out more</a>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card bg-dark">
+                        <img src="/assets/img/hands2.webp" class="card-img opacity-75">
+                        <div class="card-img-overlay text-white justify-content-center pt-5 mt-5 px-5">
+                            <h2 class="card-title"> Trauma & PTSD</h2>
+                            <p class="card-text">Many individuals can experience symptoms associated with painful and traumatic circumstances. Anxiety, fear, and hopelessness are a few emotions that can linger post traumatic events. We can help you overcome these symptoms and guide you through the process of grief and healing. </p>
+                            <a href="#" class="btn btn-secondary px-3" role="button">Find out more</a>
+                        </div>
+                        <!-- <div class="card-img-overlay text-white d-flex justify-content-center align-items-center px-5">
                             <p>Many individuals can experience symptoms associated with painful and traumatic circumstances. Anxiety, fear, and hopelessness are a few emotions that can linger post traumatic events. We can help you overcome these symptoms and guide you through the process of grief and healing. </p>
                         </div>
                         <div class="card-img-overlay d-flex justify-content-center align-items-end pb-5 mb-5">
                             <a href="#" class="btn btn-secondary px-3" role="button">Find out more</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
 
-                
-                <div class="col pe-1 ps-0 mx-0">
+                <div class="col">
                     <div class="card bg-dark">
-                        <img src="/assets/img/hands3.webp" class="card-img img-fluid opacity-75">
-                        <div class="card-img-overlay text-white d-flex justify-content-center pt-5 mt-5 px-5">
-                            <h2> Relationships</h2>
+                        <img src="/assets/img/hands3.webp" class="card-img opacity-75">
+                        <div class="card-img-overlay text-white justify-content-center pt-5 mt-5 px-5">
+                            <h2 class="card-title"> Relationships</h2>
+                            <p class="card-text">Relationship counseling can be beneficial to couples who are looking to strengthen their emotional connection, in all stages of their relationship. Therapy sessions are held with with the couple and in a supportive place to discuss issues and solutions to better strengthen your relationship.</p>
+                            <a href="#" class="btn btn-secondary px-3" role="button">Find out more</a>
                         </div>
-                        <div class="card-img-overlay text-white d-flex justify-content-center align-items-center px-5">
+                        <!-- <div class="card-img-overlay text-white d-flex justify-content-center align-items-center px-5">
                             <p>Relationship counseling can be beneficial to couples who are looking to strengthen their emotional connection, in all stages of their relationship. Therapy sessions are held with with the couple and in a supportive place to discuss issues and solutions to better strengthen your relationship.</p>
                         </div>
                         <div class="card-img-overlay d-flex justify-content-center align-items-end pb-5 mb-5">
                             <a href="#" class="btn btn-secondary px-3" role="button">Find out more</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -188,24 +214,24 @@
         <div class="container-fluid text-center">
             <div class="row justify-content-md-center">
                 <hr class="mt-5" >
-                <div class="col-sm-6 mx-0 pe-5">
-                    <h2 id="MTP" class="p-2 ps-5 pe-5 text-start ms-5 me-5 mt-5">CONTACT</h2>
+                <div class="col-sm-6 mx-0 pe-5 order-2 order-md-2 order-lg-1">
+                    <h2 id="MTP" class="ps-2 ps-lg-5 pe-lg-5 text-start ms-lg-5 me-lg-5 mt-lg-5 mt-5">CONTACT</h2>
                     <hr class="" style="width:7%; font-size: 32px; border-style: solid; border-bottom-width:0.5px; margin-top:24px; margin-left:95px; margin-right:auto;"/>
 
-                    <h4 id="jen_name" class="p-4 ps-5 pe-5 ms-5 me-5 text-start">Take the first step to get help.</h3>
-                    <p class="ps-5 pe-5 text-start p_text ms-5 me-5 fst-italic">If this is an emergency, please call 911 immediately.</p>
-                    <p class="ps-5 pe-5 text-start p_text ms-5 me-5">Please contact me with questions or to make an psychotherapy appointment at my New Haven, CT office or via Telehealth.</p>
+                    <h4 id="jen_name" class="p-lg-4 ps-lg-5 pe-lg-5 ms-lg-5 me-lg-5 text-start ps-2 pb-3">Take the first step to get help.</h3>
+                    <p class="ps-lg-5 pe-lg-5 text-start p_text ms-lg-5 me-lg-5 fst-italic ps-2 pb-2">If this is an emergency, please call 911 immediately.</p>
+                    <p class="ps-lg-5 pe-lg-5 text-start p_text ms-lg-5 me-lg-5 ps-2 pb-4">Please contact me with questions or to make an psychotherapy appointment at my New Haven, CT office or via Telehealth.</p>
 
-                    <h4 id="jen_name" class="p-4 ps-5 pe-5 text-start ms-5 me-5">Jennifer Hagelston, LCSW, Psychotherapy</h3>
-                    <p class="ps-5 pe-5 text-start p_text ms-5 me-5">79 Trumbull Street, New Haven, CT 06511, US</p>
-                    <p class="ps-5 pe-5 text-start p_text ms-5 me-5">(203) 989-0128</p>
-                    <h4 id="jen_name" class="p-4 ps-5 pe-5 text-start ms-5 me-5">Hours</h3>
-                    <p class="ps-5 pe-5 text-start p_text ms-5 me-5 pb-4">Open today </p>
+                    <h4 id="jen_name" class="ps-lg-5 pe-lg-3 text-start ms-lg-5 me-lg-5 p-2 pb-3">Jennifer Hagelston, LCSW, Psychotherapy</h3>
+                    <p class="ps-lg-5 pe-lg-5 text-start p_text ms-lg-5 me-lg-5 ps-2 pb-2">79 Trumbull Street, New Haven, CT 06511, US</p>
+                    <p class="ps-lg-5 pe-lg-5 text-start p_text ms-lg-5 ps-2 mb-sm-2 pb-4 pb-lg-5">(203) 989-0128</p>
+                    <h4 id="jen_name" class="ps-lg-5 text-start ms-lg-5 me-lg-5 ps-2 pb-2">Hours</h3>
+                    <p class="ps-lg-5 pe-lg-5 text-start p_text ms-lg-5 pb-4 p-2">Open by Appointment (Monday - Friday)</p>
                     <div class="ps-5 text-start ms-5 mb-5">
-                        <a href="#" class="btn btn-primary px-3" role="button">Send Message</a>
+                        <a href="#" class="btn btn-secondary px-3" role="button">Send Message</a>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-auto col-sm-6 mx-0 ps-0 pe-3 mt-5">
+                <div class="col-lg-6 col-md-auto col-sm-6 mx-0 ps-0 pe-3 mt-5 order-1 order-md-1 order-lg-2">
                     <img class="rounded img-fluid" src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/-72.9223,41.3134,16,0/300x200?access_token=pk.eyJ1Ijoiai1kb21pbmd1ZXo5IiwiYSI6ImNsanFkY2h5YjA0ZWIzZ282NnViY3p6dzAifQ.sti2cdqhz1T4FeydeReN1Q" style=" position: relative; width:100%;">
                 </div>
             </div>
@@ -217,10 +243,10 @@
             <footer class="py-3 my-4">
               <ul class="nav justify-content-center border-bottom pb-3 mb-3 header_text_large">
                 <li class="nav-item"><a href="/" class="nav-link px-2 text-body-secondary">Home</a></li>
-                <li class="nav-item"><a href="practitioner.html" class="nav-link px-2 text-body-secondary">The Practitioner</a></li>
-                <li class="nav-item"><a href="practice.html" class="nav-link px-2 text-body-secondary">The Practice</a></li>
+                <li class="nav-item"><a href="the-practitioner.html" class="nav-link px-2 text-body-secondary">The Practitioner</a></li>
+                <li class="nav-item"><a href="the-practice.html" class="nav-link px-2 text-body-secondary">The Practice</a></li>
                 <li class="nav-item"><a href="psychotherapy.html" class="nav-link px-2 text-body-secondary">Psychotherapy</a></li>
-                <li class="nav-item"><a href="inspire.html" class="nav-link px-2 text-body-secondary">Inspire Me</a></li>
+                <li class="nav-item"><a href="inspire-me.html" class="nav-link px-2 text-body-secondary">Inspire Me</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-body-secondary">Contact</a></li>
               </ul>
               <p class="text-center text-body-secondary header_text_large">&copy; Jennifer Hagelston, LCSW</p>

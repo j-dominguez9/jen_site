@@ -8,7 +8,7 @@
         <!--BOX ICONS-->
 
         <!--CSS-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link href="./scss/custom.css" rel="stylesheet">
 
 
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
@@ -46,12 +46,12 @@
             <header class="d-flex flex-nowrap justify-content-center py-3 mb-0">
 
                 <ul class="nav col col-lg-auto me-lg-auto justify-content-start align-items-start mb-md-0 header_text_small">
-                    <li class="nav-item"><a class="nav-link active px-3 link_second" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-3 link_dark" href="practitioner.html">The Practitioner</a></li>
-                    <li class="nav-item"><a class="nav-link px-3 link_dark" href="practice.html">The Practice</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 link_dark" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 link_dark" href="the-practitioner.html">The Practitioner</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 link_dark" href="the-practice.html">The Practice</a></li>
                     <li class="nav-item"><a class="nav-link px-3 link_dark" href="psychotherapy.html">Psychotherapy</a></li>
-                    <li class="nav-item"><a class="nav-link px-3 link_dark" href="inspire.html">Inspire Me</a></li>
-                    <li class="nav-item"><a class="nav-link px-3 link_dark" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 link_dark" href="inspire-me.html">Inspire Me</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 link_second active" href="contact.html">Contact</a></li>
                 </ul>
 
                 <ul class="nav  mb-md-0 header_text_large">
@@ -77,36 +77,57 @@
 
         <!--Contact Form-->
         <div class="container">
-            <div class="row">
-                <div class="col-6 pe-5">
+            <div class="row justify-content-center d-flex">
+                <div class="col-md-4 col-lg-4 col-sm-8 pe-0">
                     <form>
+                        <!--Name input-->
                         <div class="mb-3">
-                            <label for="exampleInputName" class="form-label">Name</label>
-                            <input type="name" class="form-control" id="exampleInputName">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="name" class="form-control" id="name" data-sb-validations="required">
+                            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                         </div>
+
+                        <!--Email input-->
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label" placeholder="name@example.com">Email Address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+                            <label for="email" class="form-label" placeholder="name@example.com">Email Address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" data-sb-validations="required, email">
                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
                         </div>
+
+                        <!--Message input-->
                         <div class="mb-3">
-                            <label for="exampleFormControlTextArea1" class="form-label">Message</label>
-                            <textarea class="form-control" id="exampleFormControlTextArea1" rows="5"></textarea>
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" data-sb-validations="required"></textarea>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
                         </div>
+
+                        <!-- Form submissions success message -->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">Form submission successful!</div>
+                        </div>
+                    
+                        <!-- Form submissions error message -->
+                        <div class="d-none" id="submitErrorMessage">
+                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                        </div>
+                        
+                        <!--Check and submit-->
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Confirm</label>
                           </div>
-                          <button type="submit" class="btn btn-primary">Submit</button>
+                          <button type="submit" class="btn btn-secondary">Submit</button>
                     </form>
                 </div>
-                <div class="col-6 mt-4 pe-5 ps-5">
-                    <h4 id="jen_name" class="mb-3 pe-5">If this is a medical emergency, please call 911 immediately.</h4>
-                    <p class="p_text fw-bolder pe-5">Your mental health is important. To make a counseling appointment in person or via Telehealth with Jennifer Hagelston, LCSW, Psychotherapy in New Haven please call or email.</p>
-                    <h4 id="jen_name" class="mt-5 mb-4 pe-5">Jennifer Hagelston, LCSW, Psychotherapy</h4>
-                    <p class="p_text pb-3 pe-5">79 Trumbull Street, 2nd Floor, New Haven, CT 06511, US</p>
+                <div class="col-md-4 col-lg-4 col-sm-8 mt-4 ps-5">
+                    <h4 id="jen_name" class="mb-3">If this is a medical emergency, please call 911 immediately.</h4>
+                    <p class="p_text fw-bolder">Your mental health is important. To make a counseling appointment in person or via Telehealth with Jennifer Hagelston, LCSW, Psychotherapy in New Haven please call or email.</p>
+                    <h4 id="jen_name" class="mt-5 mb-4">Jennifer Hagelston, LCSW, Psychotherapy</h4>
+                    <p class="p_text pb-3">79 Trumbull Street, 2nd Floor, New Haven, CT 06511, US</p>
                     <p class="p_text">(203)989-0128</p>
-                    <h4 id="jen_name" class="mt-5 pe-5">Hours by appointment only.</h4>
+                    <h4 id="jen_name" class="mt-5">Hours by appointment only.</h4>
                 </div>
             </div>
         </div>
@@ -126,10 +147,10 @@
             <footer class="py-3 my-4">
               <ul class="nav justify-content-center border-bottom pb-3 mb-3 header_text_large">
                 <li class="nav-item"><a href="/" class="nav-link px-2 text-body-secondary">Home</a></li>
-                <li class="nav-item"><a href="practitioner.html" class="nav-link px-2 text-body-secondary">The Practitioner</a></li>
-                <li class="nav-item"><a href="practice.html" class="nav-link px-2 text-body-secondary">The Practice</a></li>
+                <li class="nav-item"><a href="the-practitioner.html" class="nav-link px-2 text-body-secondary">The Practitioner</a></li>
+                <li class="nav-item"><a href="the-practice.html" class="nav-link px-2 text-body-secondary">The Practice</a></li>
                 <li class="nav-item"><a href="psychotherapy.html" class="nav-link px-2 text-body-secondary">Psychotherapy</a></li>
-                <li class="nav-item"><a href="inspire.html" class="nav-link px-2 text-body-secondary">Inspire Me</a></li>
+                <li class="nav-item"><a href="inspire-me.html" class="nav-link px-2 text-body-secondary">Inspire Me</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-body-secondary">Contact</a></li>
               </ul>
               <p class="text-center text-body-secondary header_text_large">&copy; Jennifer Hagelston, LCSW</p>

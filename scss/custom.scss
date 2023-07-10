@@ -1,13 +1,255 @@
-/* import the Bootstrap */
-@import "bootstrap";
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+3:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+3:italic:wght@300;400;700&display=swap');
 
-/* ------- customize primary button color -------- */   
-$mynewcolor:#77cccc;
 
-.btn-primary {
-    @include button-variant($mynewcolor, darken($mynewcolor, 7.5%), darken($mynewcolor, 10%), lighten($mynewcolor,5%), lighten($mynewcolor, 10%), darken($mynewcolor,30%));
+
+
+//(colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// include any default variable overrides here
+$secondary: rgb(89, 121, 142);
+
+//remainder of required bs stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+//include any default map overrides here
+
+//include remainder of required parts
+@import "../node_modules/bootstrap/scss/maps";
+
+
+
+
+@import "../node_modules/bootstrap/scss/utilities";
+
+
+
+.black_border {
+    border:1px solid black;
 }
 
-.btn-outline-primary {
-    @include button-outline-variant($mynewcolor, #222222, lighten($mynewcolor,5%), $mynewcolor);
+.header_text_small {
+    font-family:'Source Sans 3';
+    font-weight:400;
+    font-size: 90%;
+    letter-spacing:.071em;
 }
+
+.header_text_large {
+    font-family: 'Source Sans 3';
+    font-weight:400;
+    font-size: 107%;
+}
+
+.inline_text_large {
+    font-family: 'Source Sans 3';
+    font-weight: 400;
+    font-size: 140%;
+}
+
+.link_second {
+    font-weight:700;
+    color:rgb(89, 121, 142);
+}
+
+.link_dark {
+    font-weight:400;
+    color:rgb(27, 27, 27);
+}
+
+#bg-wave {
+    background: url(/assets/img/header2.webp);
+    background-size: cover;
+    padding: 230px;
+    background-repeat:no-repeat;
+    background-blend-mode: normal;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    transition: opacity 0.25s, background-size 0.25s, background-position 0.25s;
+    transition-property: opacity, background-size, background-position;
+    transition-duration: 0.25s, 0.25s, 0.25s;
+    transition-timing-function: ease, ease, ease;
+    transition-delay: 0s, 0s, 0s;
+    text-shadow: none;
+}
+
+@media screen and (min-width: 1280px) {
+    #bg-wave {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #bg-wave {
+        min-height: 50vh;
+    }
+}
+
+#logo {
+    font-size:16px;
+    background-color: white;
+    object-fit:contain;
+    max-width:47%;
+    max-height:47%;
+    padding:15px;
+    vertical-align: middle;
+    cursor: pointer;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+#MTP {
+    font-family:'Fjalla One';
+    font-weight: 400;
+    color: rgb(89, 121, 142)
+}
+
+.buttons {
+    color: rgb(109, 147, 172)
+}
+
+#jen_name {
+    font-family: 'Source Sans 3';
+    color: rgb(27, 27, 27);
+    font-weight:300;
+}
+
+.p_text {
+    font-family: 'Source Sans 3';
+    color: rgb(94, 94, 94);
+    
+}
+
+div#banner { 
+    position: relative; 
+    background-color: rgb(89, 121, 142); 
+    width: 100%;
+    height: auto;;
+    border-left-width:1px;
+    border-bottom-width:1px;
+    border-right-width:1px;
+    border-top-width:1px; 
+    border-color: #eee;
+    border-bottom-style: solid;
+    padding-top:56px; 
+    padding-bottom:56px;
+    margin-top:10px;
+  }
+
+div#gray_banner { 
+    position: relative; 
+    background-color: rgb(246, 246, 246); 
+    width: 100%;
+    height: auto;;
+    border-left-width:1px;
+    border-bottom-width:1px;
+    border-right-width:1px;
+    border-top-width:1px; 
+    border-color: #eee;
+    border-bottom-style: solid;
+    padding-top:56px; 
+    padding-bottom:56px;
+}
+
+div#white_banner { 
+    position: relative; 
+    background-color: white; 
+    width: 100%;
+    height: auto;;
+    border-left-width:1px;
+    border-right-width:1px;
+    border-top-width:1px; 
+    border-color: #eee;
+    padding-top:65px; 
+    padding-bottom:30px;
+    }
+
+div#plant_banner {
+    width:100%;
+    background-image: linear-gradient(rgba(0,0,0,0.24) 0%, rgba(0,0,0,0.24) 100%), url(/assets/img/plant_banner.webp);
+    background-size: cover;
+    opacity: 1;
+    height: 320px;
+    background-position: center;
+    text-shadow: 0px 2px 30px rgba(0,0,0.12);
+    transition: opacity 0.25s, background-size 0.25s, background-position 0.25s;
+    transition-property: opacity, background-size, background-position;
+    transition-duration: 0.25s, 0.25s, 0.25s;
+    transition-timing-function: ease, ease, ease;
+    transition-delay: 0s, 0s, 0s;
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+}
+
+h2#psychotherapy {
+    font-family:'Fjalla One';
+    font-weight:400;
+    color: rgb(89, 121, 142);
+    overflow-wrap: break-word;
+    letter-spacing: normal;
+
+}
+
+.bd_psych {
+    width: 50px;
+    border-bottom-width: 2px;
+    border-style: solid;
+    border-color: rgb(226,226,226);
+    margin-top: 24px;
+
+}
+
+.pt_img{
+    display: inline-block;
+    background: linear-gradient(rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.24) 100%);
+    opacity: 1;
+}
+
+div#practice_banner {
+    width:100%;
+    background-image: linear-gradient(rgba(0,0,0,0.24) 0%, rgba(0,0,0,0.24) 100%), url(/assets/img/practice_banner.webp);
+    background-size: cover;
+    margin-left:0px;
+    margin-right:0px;
+    height:200px;
+    /* padding: 230px; */
+    background-repeat:no-repeat;
+    background-blend-mode: normal;
+    background-position: center;
+    text-shadow: 0px 2px 30px rgba(0,0,0.12);
+    /* background-position-x: 50%;
+    background-position-y: 50%; */
+    transition: opacity 0.25s, background-size 0.25s, background-position 0.25s;
+    transition-property: opacity, background-size, background-position;
+    transition-duration: 0.25s, 0.25s, 0.25s;
+    transition-timing-function: ease, ease, ease;
+    transition-delay: 0s, 0s, 0s;
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+}
+
+h2#new_pat {
+    font-family:'Fjalla One';
+    font-weight:400;
+    color: white;
+    font-size:300%;
+    overflow-wrap: break-word;
+    letter-spacing: normal;
+    text-shadow: 0px 0px 0px rgba(0,0,0);
+}
+
+h3#book_session {
+    font-family:'Fjalla One';
+    font-weight:400;
+    color: white;
+    font-size:230%;
+    overflow-wrap: break-word;
+    letter-spacing: normal;
+    text-shadow: 0px 0px 0px rgba(0,0,0);
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
