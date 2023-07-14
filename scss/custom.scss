@@ -11,6 +11,11 @@
 
 // include any default variable overrides here
 $secondary: rgb(89, 121, 142);
+$navbar-light-active-color:rgb(89, 121, 142);
+$navbar-light-brand-color:rgb(27,27,27);
+$navbar-light-brand-hover-color: rgb(53, 73, 87);
+$navbar-light-hover-color: rgb(53, 73, 87);
+$navbar-light-color: rgb(53, 73, 87);
 
 //remainder of required bs stylesheets
 @import "../node_modules/bootstrap/scss/variables";
