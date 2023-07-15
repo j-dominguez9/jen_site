@@ -12,7 +12,13 @@
 
 
         <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script>
+            function onSubmit(token) {
+              document.getElementById("demo-form").submit();
+            }
+        </script>
+         
         
         <!--Favicon-->
         <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
@@ -72,7 +78,7 @@
 
         <!--Name-->
         <div class="d-flex justify-content-center align-items-center flex-column">
-            <h2 id="MTP" class="pt-3 mt-5 text-uppercase">Contact Jennifer Hagelston, LCSW, Psychotherapy in New Haven</h2>
+            <h2 id="MTP" class="pt-3 mt-5 text-uppercase text-center">Contact Jennifer Hagelston, LCSW, Psychotherapy in New Haven</h2>
             <hr class="" style="width:4%; font-size: 32px; border-style: solid; border-bottom-width:0.5px; margin-top:24px;">
         </div>
 
@@ -80,26 +86,26 @@
         <div class="container">
             <div class="row justify-content-center d-flex">
                 <div class="col-md-4 col-lg-4 col-sm-8 pe-0">
-                    <form>
+                    <form action="?" method="POST">
                         <!--Name input-->
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
+                        <div class="mb-3 pe-2 pe-lg-0">
+                            <label for="name" class="form-label" style="font-family: 'Source Sans 3', arial, sans-serif; color: rgb(53, 73, 87);">Name</label>
                             <input type="name" class="form-control" id="name" data-sb-validations="required">
                             <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                         </div>
 
                         <!--Email input-->
-                        <div class="mb-3">
-                            <label for="email" class="form-label" placeholder="name@example.com">Email Address</label>
+                        <div class="mb-3 pe-2 pe-lg-0">
+                            <label for="email" class="form-label" placeholder="name@example.com" style="font-family: 'Source Sans 3', arial, sans-serif; color: rgb(53, 73, 87);">Email Address</label>
                             <input type="email" class="form-control" id="email" aria-describedby="emailHelp" data-sb-validations="required, email">
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <div id="emailHelp" class="form-text"><i>We'll never share your email with anyone else.</i></div>
                             <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
                             <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
                         </div>
 
                         <!--Message input-->
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
+                        <div class="mb-3 pe-2 pe-lg-0">
+                            <label for="message" class="form-label" style="font-family: 'Source Sans 3', arial, sans-serif; color: rgb(53, 73, 87);">Message</label>
                             <textarea class="form-control" id="message" rows="5" data-sb-validations="required"></textarea>
                             <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
                         </div>
@@ -115,11 +121,17 @@
                         </div>
                         
                         <!--Check and submit-->
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Confirm</label>
-                          </div>
-                          <button type="submit" class="btn btn-secondary">Submit</button>
+                        <!-- <div class="mb-3 form-check"> -->
+                            <!-- <div class=" mx-0 px-0 g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback="onRecaptchaSuccess" data-expired-callback="onRecaptchaResponseExpiry" data-error-callback="onRecaptchaError"></div> -->
+                            <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1"> -->
+                            <!-- <label class="form-check-label" for="exampleCheck1">Confirm</label> -->
+                        <!-- </div> -->
+                        <div class="text-center text-lg-start d-grid pe-2 pe-lg-0 d-lg-flex">
+                            <button type="submit" class="btn btn-secondary g-recaptcha" data-sitekey="6LfGJSgnAAAAACMPDX8Y7ne2kzrNAd-5XvIpTvRx" data-callback='onSubmit' data-action='submit'>
+                                Submit
+                            </button>
+                        </div>
+                        <p class="py-5 ps-0 text-center pe-2 pe-lg-0" style="font-size:10px;">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy " target="_blank">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.</p>
                     </form>
                 </div>
                 <div class="col-md-4 col-lg-4 col-sm-8 mt-4 ps-5">
