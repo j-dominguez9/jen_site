@@ -23,7 +23,7 @@
 .inline_text_large {
   font-family: "Source Sans 3";
   font-weight: 400;
-  font-size: 140%;
+  font-size: 130%;
 }
 
 .link_second {
@@ -38,6 +38,9 @@
 
 #bg-wave {
   background: url(/assets/img/header2.webp);
+  padding: 230px;
+  background-repeat: no-repeat;
+  background-blend-mode: normal;
   background-position-x: 50%;
   background-position-y: 50%;
   transition: opacity 0.25s, background-size 0.25s, background-position 0.25s;
