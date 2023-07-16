@@ -38,10 +38,6 @@
 
 #bg-wave {
   background: url(/assets/img/header2.webp);
-  background-size: cover;
-  padding: 230px;
-  background-repeat: no-repeat;
-  background-blend-mode: normal;
   background-position-x: 50%;
   background-position-y: 50%;
   transition: opacity 0.25s, background-size 0.25s, background-position 0.25s;
@@ -164,16 +160,7 @@ h2#psychotherapy, #psychotherapy.h2 {
 }
 
 div#practice_banner {
-  width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.24) 100%), url(/assets/img/practice_banner.webp);
-  background-size: auto;
-  margin-left: 0px;
-  margin-right: 0px;
-  height: 200px;
-  /* padding: 230px; */
-  background-repeat: no-repeat;
-  background-blend-mode: normal;
-  background-position: center;
   text-shadow: 0px 2px 30px rgb(0, 0, 0);
   /* background-position-x: 50%;
   background-position-y: 50%; */
